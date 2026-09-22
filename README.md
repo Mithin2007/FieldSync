@@ -1,8 +1,17 @@
 # FieldSync
-Offline-first industrial inspection PWA demo.
 
-Run with `npm start`, then open http://localhost:4173.
+Offline-first collaborative industrial inspection PWA demo.
 
-Added capabilities: bundled English/Tamil/Hindi UI with persisted local selection; technician availability; admin direct assignment or local task publishing; available-inspection cards and detail; atomic local single-claim transaction; OPEN → CLAIMED → IN_PROGRESS → COMPLETED lifecycle; queue, audit, and local notification-ready state. Existing IndexedDB inspection workflow, Sync Center, conflicts, audit trail, and service-worker offline shell remain.
+## Run locally
 
-This is an honest browser-local MVP: no backend, production auth, push notification, real-time transport, or server claim arbitration. Offline devices only see previously synchronized tasks.
+```bash
+npm start
+```
+
+Open http://localhost:4173. No dependency installation is required.
+
+Use the prefilled login and select Inspector, Admin, or Company.
+
+## Honest MVP scope
+
+IndexedDB persistence, service-worker offline shell, local pending operations, conflict review, audit history, and role workflows are implemented in the browser. Remote backend, production authentication, cross-device transport, and Yjs CRDT synchronization are not implemented.
